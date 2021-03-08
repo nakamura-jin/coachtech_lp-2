@@ -1,0 +1,527 @@
+$pink: #e37ab0;
+$blue: #6f99e3;
+
+@mixin buttonStyle(
+  $width: 110px,
+  $height: 45px,
+  $color: white,
+  $font-size: 14px
+) {
+  a {
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    border-radius: 30px;
+    width: $width;
+    height: $height;
+    color: $color;
+    font-size: $font-size;
+    border-radius: 30px;
+  }
+}
+
+@mixin inner {
+    padding: 70px 0;
+}
+
+@mixin contentsItem {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 40px;
+}
+
+a {
+  text-decoration: none;
+}
+
+li {
+  list-style: none;
+}
+
+h2 {
+  font-size: 38px;
+}
+
+h3 {
+  font-size: 32px;
+}
+
+.container {
+  max-width: 1000px;
+  width: 90%;
+  margin: 0 auto;
+}
+
+.header-wrapper {
+  height: 70px;
+  display: flex;
+  justify-content: space-between;
+  text-align: center;
+  align-items: center;
+}
+
+.header-wrapper__nav-list {
+  display: flex;
+  li {
+    &:not(:first-of-type) {
+      margin-left: 20px;
+    }
+  }
+  a {
+    color: black;
+  }
+}
+
+.header-wrapper__button {
+  @include buttonStyle;
+  display: flex;
+  .btn {
+    &:first-of-type {
+      background-color: $pink;
+      margin-right: 25px;
+    }
+    &:last-of-type {
+      background-color: $blue;
+    }
+  }
+}
+
+.firstview {
+  background: url("./img/fv__bg-pc.svg") no-repeat;
+  background-size: cover;
+  padding: 40px 0;
+  display: flex;
+  justify-content: space-between;
+  text-align: center;
+  align-items: center;
+}
+
+.firstview-wrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.firstview-wrapper__content {
+  width: 50%;
+}
+
+.firstview-wrapper__content--catchCopy {
+  font-size: 46px;
+  text-align: left;
+}
+
+.firstview-wrapper__content--sub-catchCopy {
+  font-size: 16px;
+  margin-top: 25px;
+  text-align: left;
+}
+
+.firstview-wrapper__content {
+  @include buttonStyle($width: 60%, $height: 60px, $font-size: 16px);
+  .btn {
+    background-color: $pink;
+  }
+}
+
+.about-wrapper {
+  background-color: #fff7fb;
+  @include inner;
+  display: flex;
+  justify-content: space-around;
+}
+
+.about-wrapper__img {
+  width: 50%;
+  position: relative;
+  left: -6%;
+}
+
+.about-wrapper__text {
+  align-items: center;
+  width: 45%;
+}
+
+.trouble {
+  @include inner;
+}
+
+.trouble-wrapper__title {
+  text-align: center;
+  margin: 40px auto;
+}
+
+.trouble-wrapper__group {
+  display: flex;
+  justify-content: space-between;
+}
+
+.trouble-wrapper__item {
+  width: 30%;
+}
+
+.trouble-wrapper__text {
+  font-size: 22px;
+  font-weight: bold;
+  text-align: center;
+}
+
+.solution {
+  @include inner;
+  background-color: #fff7fb;
+}
+
+.solution-wrapper {
+  text-align: center;
+}
+
+.solution-wrapper__group {
+  @include contentsItem;
+    align-items: center;
+}
+
+.solution-wrapper__image {
+  display: block;
+  width: 45%
+}
+
+.solution-wrapper__image img {
+  width: 100%;
+}
+
+.solution-wrapper__item {
+  width: 45%;
+  text-align: left;
+  align-items: center;
+}
+
+@mixin beforeStyle {
+  font-size: 40px;
+  position: absolute;
+  left: 0;
+  top: 50%;
+  transform: translate(0, -50%);
+}
+
+.solution-wrapper__section {
+  padding-left: 60px;
+  text-align: left;
+  position: relative;
+}
+
+.first {
+  &::before {
+    content: "01";
+    color: $pink;
+    @include beforeStyle;
+  }
+}
+
+.reverse {
+  flex-direction: row-reverse;
+}
+
+.second {
+  &::before {
+    content: "02";
+    color: $blue;
+    @include beforeStyle;
+  }
+}
+
+.third {
+  &::before {
+    content: "03";
+    color: $pink;
+    @include beforeStyle;
+  }
+}
+
+.future {
+  @include inner;
+}
+
+.future-wrapper {
+  text-align: center;
+}
+
+.future-wrapper__group {
+  display: flex;
+  @include contentsItem;
+}
+
+.future-wrapper__item {
+  width: 15%;
+  border: 1px solid $pink;
+  box-shadow: 0 0 6px $pink;
+  border-radius: 15px;
+  padding: 10px;
+  box-sizing: border-box;
+  text-align: center;
+}
+
+.future-wrapper__item img {
+  margin-top: 10px;
+}
+
+.future-wrapper__text {
+  margin-top: 10px;
+}
+
+.learning {
+  background-color: $pink;
+  @include inner;
+}
+
+.learning-wrapper {
+  justify-content: center;
+}
+
+.learning-wrapper__title {
+  font-size: 32px;
+  text-align: center;
+}
+
+.learning-wrapper__button {
+  display: flex;
+  justify-content: center;
+  @include buttonStyle($width: 350px, $height: 64px , $font-size: 16px);
+  .btn {
+    &:first-of-type {
+      background-color: $blue;
+      margin-right: 25px;
+    }
+    &:last-of-type {
+      background-color: white;
+      color: $pink;
+    }
+  }
+}
+
+.introduction {
+  @include inner;
+}
+
+.introduction-wrapper {
+  text-align: center;
+}
+
+.introduction-wrapper__group {
+  @include contentsItem;
+  
+}
+
+.introduction-wrapper__item {
+  box-sizing: border-box;
+  width: 18%;
+  box-shadow: 0 0 6px #ddd;
+  border-radius: 15px;
+  &:first-of-type {
+    margin-left: 1%;
+  }
+  &:last-of-type {
+    margin-right: 1%;
+  }
+}
+
+.introduction-wrapper__item img {
+  width: 100%;
+}
+
+.introduction-wrapper__content {
+  padding: 30px 15px;
+  text-align: left;
+  position: relative;
+}
+
+.introduction-wrapper__genre {
+  position: absolute;
+  top: -15px;
+  left: 15px;
+  border: 1px solid $pink;
+  padding: 2px 10px;
+  color: black;
+  font-size: 14px;
+}
+
+.introduction-wrapper__company {
+  font-size: 14px;
+  color: black;
+}
+
+.introduction-wrapper__text {
+  font-size: 20px;
+  margin-top: 15px;
+  color: black;
+  font-weight: bold;
+}
+
+.price {
+  @include inner;
+  text-align: center;
+}
+
+.price-wrapper__group {
+  @include contentsItem;
+  display: flex;
+  align-items: center;
+}
+
+.price-wrapper__item {
+  box-shadow: 0 0 6px #dedede;
+  border-radius: 15px;
+  width: 33.3%;
+}
+
+@mixin priceItem($background-color: $blue) {
+  color: white;
+  background-color: $background-color;
+  padding: 10px 0;
+  border-radius: 15px 15px 0 0;
+}
+.price-wrapper__item-head {
+  @include priceItem;
+}
+
+.price-wrapper__item-head--center {
+  @include priceItem($background-color: $pink)
+}
+
+.price-wrapper__item-head h3 {
+  font-size: 38px;
+}
+
+.price-wrapper__item-head--center h3 {
+  font-size: 38px;
+}
+
+.price-wrapper__item-content {
+  padding: 15px 30px;
+  @include buttonStyle($width: 272px, $height: 62px, $color: black, $font-size: 16px);
+  .btn {
+    background-color: #E8E8E8;
+  }
+    ul {
+      li {
+        border-bottom: 1px solid #dedede;
+        padding-bottom: 5px;
+        margin: 15px 0;
+        text-align: center;
+        color: #535353;
+      }
+    }
+}
+
+.qa {
+  @include inner;
+}
+
+.qa-wrapper {
+  width: 760px;
+}
+
+.qa-wrapper__title {
+  text-align: center;
+}
+
+.qa-wrapper__question {
+  border: 1px solid $pink;
+  border-radius: 15px;
+}
+
+.qa-wrapper__question {
+  padding: 20px 40px 20px 50px;
+  color: $pink;
+  position: relative;
+  &::before {
+    content: "Q";
+    position: absolute;
+    font-size: 22px;
+    font-weight: bold;
+    top: 50%;
+    transform: translate(-25px, -50%);
+  }
+  &::after {
+    content: "";
+    border-top: 1px solid black;
+    border-right: 1px solid black;
+    width: 5px;
+    height: 5px;
+    position: absolute;
+    top: 50%;
+    right: 25px;
+    transform: rotate(135deg);
+  }
+}
+
+.qa-wrapper__answer {
+  padding: 20px 20px 20px 50px;
+  margin-bottom: 16px;
+  position: relative;
+  &::before {
+    content: "A";
+    position: absolute;
+    top: 40px;
+    transform: translate(-25px,-5px);
+    font-size: 22px;
+    font-weight: bold;
+    color: $blue;
+  }
+}
+
+.try {
+  background-color: $pink;
+  @include inner;
+}
+
+.try-wrapper {
+  justify-content: center;
+}
+
+.try-wrapper__title {
+  font-size: 32px;
+  text-align: center;
+}
+
+.try-wrapper__button {
+  display: flex;
+  justify-content: center;
+  @include buttonStyle($width: 350px, $height: 64px , $font-size: 16px);
+  .btn {
+    &:first-of-type {
+      background-color: $blue;
+      margin-right: 25px;
+    }
+    &:last-of-type {
+      background-color: white;
+      color: $pink;
+    }
+  }
+}
+
+.footer-wrapper {
+  @include inner;
+  display: flex;
+  justify-content: space-between;
+}
+
+.footer-wrapper__list {
+  width: 30%;
+  li {
+    &:not(:first-of-type) {
+      margin-top: 20px;
+    }
+    a {
+      padding: 2.5px 0;
+      color: black;
+      display: block;
+    }
+  }
+}
+
+.copylight {
+  text-align: center;
+  font-size: 14px;
+  margin-bottom: 20px;
+}
