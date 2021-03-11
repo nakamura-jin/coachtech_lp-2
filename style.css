@@ -114,9 +114,16 @@ h3 {
   background-color: #e37ab0;
 }
 
-.about-wrapper {
+.sp {
+  display: none;
+}
+
+.about {
   background-color: #fff7fb;
   padding: 70px 0;
+}
+
+.about-wrapper {
   display: flex;
   justify-content: space-around;
 }
@@ -272,6 +279,7 @@ h3 {
 .learning-wrapper__title {
   font-size: 32px;
   text-align: center;
+  color: white;
 }
 
 .learning-wrapper__button {
@@ -422,7 +430,7 @@ h3 {
 }
 
 .price-wrapper__item-content .btn {
-  background-color: #E8E8E8;
+  background-color: #e8e8e8;
 }
 
 .price-wrapper__item-content ul li {
@@ -505,6 +513,7 @@ h3 {
 .try-wrapper__title {
   font-size: 32px;
   text-align: center;
+  color: white;
 }
 
 .try-wrapper__button {
@@ -559,4 +568,185 @@ h3 {
   text-align: center;
   font-size: 14px;
   margin-bottom: 20px;
+}
+
+@media screen and (max-width: 768px) {
+  .header-wrapper__nav {
+    display: none;
+  }
+  .header-wrapper__button {
+    display: none;
+  }
+  .firstview {
+    background-image: none;
+  }
+  .firstview-wrapper {
+    background-image: url("./img/fv__bg-sp.svg");
+    flex-wrap: wrap;
+    background-size: cover;
+  }
+  .firstview-wrapper__content {
+    width: 100%;
+  }
+  .firstview-wrapper__content--catchCopy {
+    font-size: 32px;
+  }
+  .first-wrapper__img {
+    width: 100%;
+  }
+  .first-wrapper__img img {
+    width: 100%;
+  }
+  .pc {
+    display: none;
+  }
+  .sp {
+    display: block;
+    width: 100%;
+  }
+  .sp a {
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    border-radius: 30px;
+    width: 60%;
+    height: 60px;
+    color: white;
+    font-size: 14px;
+    border-radius: 30px;
+  }
+  .sp .btn {
+    background-color: #e37ab0;
+  }
+  .about-wrapper {
+    flex-direction: column-reverse;
+    width: 90%;
+    margin: 0 auto;
+  }
+  .about-wrapper__img {
+    width: 100%;
+    display: block;
+  }
+  .about-wrapper__text {
+    font-size: 1.5em;
+    width: 100%;
+  }
+  .trouble {
+    padding: 70px 0;
+  }
+  .trouble-wrapper__title {
+    font-size: 26px;
+  }
+  .trouble-wrapper__group {
+    flex-direction: column;
+  }
+  .trouble-wrapper__item {
+    width: 100%;
+    display: flex;
+  }
+  .trouble-wrapper__item:nth-last-of-type(2) {
+    justify-content: space-between;
+    flex-direction: row-reverse;
+  }
+  .trouble-wrapper__item:not(:first-child) {
+    margin-top: 20px;
+  }
+  .trouble-wrapper__img {
+    width: 35%;
+  }
+  .trouble-wrapper__text {
+    font-size: 16px;
+    margin: auto 0;
+  }
+  .solution-wrapper__title {
+    font-size: 26px;
+  }
+  .solution-wrapper__group {
+    flex-direction: column;
+  }
+  .solution-wrapper__item {
+    width: 100%;
+  }
+  .solution-wrapper__section {
+    font-size: 22px;
+    padding-top: 60px;
+    padding-left: 0;
+  }
+  .solution-wrapper__section::before {
+    font-size: 26px;
+    left: 0px;
+  }
+  .second::before {
+    color: #e37ab0;
+  }
+  .solution-wrapper__image {
+    width: 100%;
+  }
+  .future-wrapper__title {
+    font-size: 26px;
+  }
+  .future-wrapper__group {
+    flex-wrap: wrap;
+  }
+  .future-wrapper__item {
+    width: 48%;
+    margin-top: 4%;
+  }
+  .learning-wrapper__title {
+    font-size: 20px;
+  }
+  .learning-wrapper__button {
+    flex-direction: column;
+    margin-top: 40px;
+  }
+  .learning-wrapper__button .btn:first-of-type {
+    margin: 0 auto 20px;
+  }
+  .learning-wrapper__button .btn:last-of-type {
+    margin: 0 auto;
+  }
+  .introduction-wrapper__title {
+    font-size: 26px;
+  }
+  .introduction-wrapper__group {
+    white-space: nowrap;
+  }
+  .introduction-wrapper__item {
+    width: 90%;
+  }
+  .price-wrapper__group {
+    display: block;
+  }
+  .price-wrapper__item {
+    width: 100%;
+  }
+  .price-wrapper__item:not(:first-of-type) {
+    margin-top: 20px;
+  }
+  .price-wrapper__item-content a {
+    margin: 0 auto;
+    width: 80%;
+  }
+  .qa-wrapper__title {
+    font-size: 26px;
+  }
+  .qa-wrapper__list {
+    width: 90%;
+  }
+  .try-wrapper__title {
+    font-size: 26px;
+  }
+  .try-wrapper__button {
+    display: block;
+  }
+  .try-wrapper__button .btn {
+    margin: 0 auto;
+  }
+  .try-wrapper__button .btn:first-of-type {
+    margin: 20px auto;
+  }
+  .footer-wrapper {
+    display: block;
+  }
 }
