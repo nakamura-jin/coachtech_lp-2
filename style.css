@@ -711,6 +711,7 @@ h3 {
   }
   .introduction-wrapper__group {
     white-space: nowrap;
+    overflow-x: scroll;
   }
   .introduction-wrapper__item {
     width: 90%;

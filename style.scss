@@ -539,8 +539,6 @@ h3 {
   margin-bottom: 20px;
 }
 
-
-
 @media screen and (max-width: 768px) {
   .header-wrapper__nav {
     display: none;
@@ -584,7 +582,7 @@ h3 {
     width: 100%;
     @include buttonStyle($width: 60%, $height: 60px);
     .btn {
-    background-color: $pink;
+      background-color: $pink;
     }
   }
 
@@ -619,7 +617,7 @@ h3 {
   .trouble-wrapper__item {
     width: 100%;
     display: flex;
-    &:nth-last-of-type(2){
+    &:nth-last-of-type(2) {
       justify-content: space-between;
       flex-direction: row-reverse;
     }
@@ -704,6 +702,7 @@ h3 {
   }
   .introduction-wrapper__group {
     white-space: nowrap;
+    overflow-x: scroll;
   }
 
   .introduction-wrapper__item {
@@ -741,10 +740,10 @@ h3 {
   .try-wrapper__button {
     display: block;
     .btn {
-    margin: 0 auto;
-    &:first-of-type {
-      margin: 20px auto;
-    }
+      margin: 0 auto;
+      &:first-of-type {
+        margin: 20px auto;
+      }
     }
   }
 
@@ -752,5 +751,3 @@ h3 {
     display: block;
   }
 }
-
-
